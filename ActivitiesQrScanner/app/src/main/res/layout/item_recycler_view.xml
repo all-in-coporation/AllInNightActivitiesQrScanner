@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view_item_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin_vertical_big_activity"
+    android:layout_marginEnd="@dimen/card_margin_horizontal_big_activity"
+    android:layout_marginStart="@dimen/card_margin_horizontal_big_activity"
+    android:layout_marginTop="@dimen/card_margin_vertical_big_activity"
+    android:foreground="?attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/card_recycler_corner_radius"
+    card_view:cardElevation="@dimen/card_recycler_elevation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/text_margin"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/rela_round"
+            android:layout_width="56dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/text_margin"
+            android:background="@drawable/fiat_uno_blanco"
+            android:transitionName="shareView" />
+
+        <TextView
+            android:id="@+id/myCarItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/rela_round"
+            android:text="Fiat Uno 2019"
+            android:textColor="@color/itemTitleTextColor" />
+
+        <TextView
+            android:id="@+id/myCarItemChasis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myCarItemTitle"
+            android:layout_marginTop="@dimen/text_margin_very_small"
+            android:layout_toEndOf="@id/rela_round"
+            android:textColor="@color/itemTextColor"
+            android:text="Chasis: ABX8876DFD76GF22F" />
+
+        <TextView
+            android:id="@+id/myCarItemPatente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myCarItemChasis"
+            android:layout_marginTop="@dimen/text_margin_very_small"
+            android:layout_toEndOf="@id/rela_round"
+            android:textColor="@color/itemTextColor"
+            android:text="AB 123 CD" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

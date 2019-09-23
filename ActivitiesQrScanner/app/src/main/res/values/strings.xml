@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">All In Night Actividades</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_activity_login">All in Night</string>
+    <string name="title_activity_wellcome_chasis">Hola!!!</string>
+    <string name="title_activity_read_chasis_or_patent">All in Night QR Scanner</string>
+    <string name="nav_header_desc">Actividad estrella</string>
+    <string name="nav_userName_value">Kika Bailable S.A</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_info_my_car">Mi Actividad</string>
+    <string name="title_add_car_to_may_cars">Scannear</string>
+
+    <string name="title_my_car_tab_info">Información</string>
+    <string name="title_my_car_tab_manuals">Manuales</string>
+    <string name="title_my_car_tab_accesories">Accesorios</string>
+
+    <string name="my_card_official_page_button_title">Página oficial</string>
+    <string name="my_card_technical_details_button_title">Ficha técnica</string>
+    <string name="my_card_manual_button_title">Manual oficial</string>
+
+    <string name="title_find_concesionaria">Buscar cercana</string>
+    <string name="title_find_concesionaria_buy">Comprar auto</string>
+    <string name="nav_userSubDescription_value">Actividad estrella</string>
+    <string name="sales_of_day">Ventas de hoy</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReadChasisOrPatentActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_read_chasis_or_patent"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@mipmap/profile"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_add_car_to_may_cars"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Necesitamos el número de chasis para conectar su auto a la App."
+        android:layout_margin="25dp"
+        android:layout_gravity="center_vertical|end"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/inputText"
+        android:hint="2G1FP22K1Y2119985"
+        android:layout_margin="25dp"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorPrimaryLight"
+        android:textColor="@color/checkbox_checked"
+        android:textSize="20sp"
+        android:textAllCaps="true" />
+</LinearLayout>

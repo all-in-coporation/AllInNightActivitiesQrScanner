@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/allinnightlogo" />
+
+    <CheckBox
+        android:layout_gravity="center"
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepto los términos y condiciones"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/CheckBoxAppTheme"/>
+
+    <Button
+        android:id="@+id/facebookButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:drawablePadding="0dp"
+        android:paddingLeft="70dp"
+        android:paddingRight="40dp"
+        android:textAlignment="center"
+        android:text="Iniciar sesión"
+        android:textColor="@color/white"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#7525b9</color>
+    <color name="colorPrimaryDark">#3c0066</color>
+    <color name="colorPrimaryLight">#631C9C</color>
+    <color name="colorAccent">#ff47d3</color>
+    <color name="black">#000000</color>
+    <color name="white">#EEEEEE</color>
+    <color name="checkbox_checked">#a3a3a3</color>
+    <color name="checkbox_unchckede">#b7b7b7</color>
+    <color name="activity_background">#EEEEEE</color>
+    <color name="itemTextColor">#b7b7b7</color>
+    <color name="itemTitleTextColor">@color/white</color>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_mis_autos"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/sales_of_day" />
+    <item
+        android:id="@+id/bottom_navigation_beneficios"
+        android:icon="@drawable/ic_smiling_emoticon_square_face"
+        android:title="Beneficios" />
+
+    <item
+        android:id="@+id/bottom_navigation_store"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:title="Store" />
+</menu>
