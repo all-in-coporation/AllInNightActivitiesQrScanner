@@ -1,15 +1,19 @@
 package ar.com.AllInNight.ActivitiesQrScanner.activities;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity
 {
     private Context context;
     private FloatingActionButton fab;
+    private static final int MY_CAMERA_REQUEST_CODE = 100;
+    private static final int READ_CHASIS_OR_POTENT = 101;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,11 +69,29 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, WellcomeChasisActivity.class);
-                startActivity(intent);
+                openCamera();
             }
         });
     }
+
+    private void openCamera(){
+        if (ContextCompat.checkSelfPermission( context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+            startActivityForResult(intent, MY_CAMERA_REQUEST_CODE);
+        }
+        else{
+            checkPermissionCamera();
+        }
+    }
+
+    private void checkPermissionCamera(){
+        if (ContextCompat.checkSelfPermission( context, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this
+                    , new String[] {Manifest.permission.CAMERA}
+                    , MY_CAMERA_REQUEST_CODE );
+        }
+    }
+
     protected void replaceFragment(Fragment fragment, String tag){
         FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.contentFrameLayout, fragment, tag);
