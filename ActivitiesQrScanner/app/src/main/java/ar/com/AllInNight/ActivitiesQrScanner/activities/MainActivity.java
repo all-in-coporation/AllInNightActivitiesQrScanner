@@ -19,8 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.AllInNight.ActivitiesQrScanner.beans.Car;
-import ar.com.AllInNight.ActivitiesQrScanner.fragments.BenefictFragment;
-import ar.com.AllInNight.ActivitiesQrScanner.fragments.BuyCarFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.CarDealerTabFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MerchandisingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarTabFragment;
@@ -92,11 +90,6 @@ public class MainActivity extends AppCompatActivity
                     replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
                     fab.hide();
                     return true;
-
-                case R.id.bottom_navigation_beneficios:
-                    replaceFragment(BenefictFragment.newInstance(), BenefictFragment.TAG);
-                    fab.hide();
-                    return true;
             }
             return false;
         }
@@ -111,14 +104,8 @@ public class MainActivity extends AppCompatActivity
 
             if (id == R.id.navigation_mis_autos) {
                 replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
-
-            } else if (id == R.id.navigation_comprar) {
-                replaceFragment(BuyCarFragment.newInstance(), BuyCarFragment.TAG);
-            } else if (id ==R.id.navigation_concesionarias){
-                replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
-            } else if (id == R.id.navigation_beneficios) {
-                replaceFragment(BenefictFragment.newInstance(), BenefictFragment.TAG);
             }
+
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
             return true;

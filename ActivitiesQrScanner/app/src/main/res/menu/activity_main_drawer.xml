@@ -6,38 +6,18 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/navigation_mis_autos"
-            android:icon="@drawable/ic_car_of_hatchback_model"
-            android:title="Mis autos" />
-
-        <item
-            android:id="@+id/navigation_beneficios"
-            android:icon="@drawable/ic_smiling_emoticon_square_face"
-            android:title="Mis beneficios" />
-
-        <item
-            android:id="@+id/navigation_concesionarias"
-            android:icon="@drawable/ic_add_location_black_24dp"
-            android:title="Concesionarias" />
-
-        <item
-            android:id="@+id/navigation_comprar"
-            android:icon="@drawable/ic_shopping_cart_black_24dp"
-            android:title="Comprar auto" />
-
-        <item
-            android:id="@+id/navigation_fabrica"
-            android:icon="@drawable/ic_directions_car_black_24dp"
-            android:title="Fábrica" />
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/sales_of_day" />
 
         <item
             android:id="@+id/navigation_contactanos"
             android:icon="@drawable/ic_contacts_black_24dp"
-            android:title="Contactanos" />
+            android:title="@string/conctact_us" />
 
         <item
             android:id="@+id/navigation_help"
             android:icon="@drawable/ic_help_black_24dp"
-            android:title="Ayuda" />
+            android:title="@string/help_option" />
     </group>
 
 </menu>

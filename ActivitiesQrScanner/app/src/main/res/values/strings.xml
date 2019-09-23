@@ -27,4 +27,6 @@
     <string name="title_find_concesionaria_buy">Comprar auto</string>
     <string name="nav_userSubDescription_value">Actividad estrella</string>
     <string name="sales_of_day">Ventas de hoy</string>
+    <string name="conctact_us">Contáctenos</string>
+    <string name="help_option">Ayuda</string>
 </resources>
