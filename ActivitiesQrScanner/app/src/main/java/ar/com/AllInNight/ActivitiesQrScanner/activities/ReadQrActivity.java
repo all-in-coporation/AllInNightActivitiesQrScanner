@@ -1,5 +1,7 @@
 package ar.com.AllInNight.ActivitiesQrScanner.activities;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,11 +36,18 @@ public class ReadQrActivity extends AppCompatActivity implements ZXingScannerVie
 
     @Override
     public void handleResult(Result rawResult) {
-        // Do something with the result here
-        Log.v(TAG, rawResult.getText()); // Prints scan results
-        Log.v(TAG, rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
-
-        // If you would like to resume scanning, call this method below:
+        Log.v(TAG, rawResult.getText());
+        Log.v(TAG, rawResult.getBarcodeFormat().toString());
+        AlertDialog alertDialog = new AlertDialog.Builder(ReadQrActivity.this).create();
+        alertDialog.setTitle("QR Leído");
+        alertDialog.setMessage("Tipo: " + rawResult.getBarcodeFormat().toString() + " - " + rawResult.getText());
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
         mScannerView.resumeCameraPreview(this);
     }
 }
