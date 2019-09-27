@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ReadChasisOrPatentActivity"
+    tools:context=".activities.ManualCodeReadingActivity"
     android:orientation="vertical"
-    tools:showIn="@layout/activity_read_chasis_or_patent"
-    android:background="@color/colorPrimaryDark">
+    tools:showIn="@layout/activity_manual_code_reading"
+    android:background="@drawable/background_degrade">
 
     <ImageView
         android:id="@+id/imageView"
@@ -47,8 +47,8 @@
         android:hint="2G1FP22K1Y2119985"
         android:layout_margin="25dp"
         android:textAlignment="center"
-        android:textColorHint="@color/colorPrimaryLight"
-        android:textColor="@color/checkbox_checked"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
         android:textSize="20sp"
         android:textAllCaps="true" />
 </LinearLayout>

@@ -42,15 +42,15 @@ public class WellcomeChasisActivity extends AppCompatActivity {
     }
 
     private void openPatent(){
-        Intent intent = new Intent(this, ReadChasisOrPatentActivity.class);
-        intent.putExtra(ReadChasisOrPatentActivity.ARG_READING_TYPE, ReadChasisOrPatentActivity.PATENT_TYPE);
+        Intent intent = new Intent(this, ManualCodeReadingActivity.class);
+        intent.putExtra(ManualCodeReadingActivity.ARG_READING_TYPE, ManualCodeReadingActivity.PATENT_TYPE);
         startActivity(intent);
 
     }
 
     private void openChasis(){
-        Intent intent = new Intent(this, ReadChasisOrPatentActivity.class);
-        intent.putExtra(ReadChasisOrPatentActivity.ARG_READING_TYPE, ReadChasisOrPatentActivity.CHASIS_TIPYE);
+        Intent intent = new Intent(this, ManualCodeReadingActivity.class);
+        intent.putExtra(ManualCodeReadingActivity.ARG_READING_TYPE, ManualCodeReadingActivity.CHASIS_TIPYE);
         startActivity(intent);
     }
 

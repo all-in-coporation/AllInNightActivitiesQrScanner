@@ -18,7 +18,7 @@
             android:label="@string/title_activity_info_my_car"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.ReadChasisOrPatentActivity"
+            android:name=".activities.ManualCodeReadingActivity"
             android:label="@string/title_activity_read_chasis_or_patent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

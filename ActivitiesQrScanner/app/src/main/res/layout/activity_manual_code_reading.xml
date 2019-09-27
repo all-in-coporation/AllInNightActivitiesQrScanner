@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ReadChasisOrPatentActivity">
+    tools:context=".activities.ManualCodeReadingActivity"
+    android:background="@drawable/background_degrade">
 
     <include layout="@layout/content_read_chasis_or_patent" />
 

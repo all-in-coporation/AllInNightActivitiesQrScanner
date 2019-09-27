@@ -25,13 +25,6 @@ public class ManualReadingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment ManualReadingFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ManualReadingFragment newInstance() {
         ManualReadingFragment fragment = new ManualReadingFragment();
         Bundle args = new Bundle();
@@ -47,14 +40,15 @@ public class ManualReadingFragment extends Fragment {
 
         //Find the +1 button
         digitarChasisButton = view.findViewById(R.id.digitarChasisButton);
-
+        digitarChasisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mListener != null) {
+                    mListener.onManualReadingClicked();
+                }
+            }
+        });
         return view;
-    }
-
-    public void onButtonPressed() {
-        if (mListener != null) {
-            mListener.onManualReadingClicked();
-        }
     }
 
     @Override
@@ -74,16 +68,6 @@ public class ManualReadingFragment extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnManualReadingFragmentInteractionListener {
         void onManualReadingClicked();
     }

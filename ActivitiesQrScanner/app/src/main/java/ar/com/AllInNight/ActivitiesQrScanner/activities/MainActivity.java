@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity
     private Context context;
     private FloatingActionButton fab;
     private static final int MY_CAMERA_REQUEST_CODE = 100;
-    private static final int READ_CHASIS_OR_POTENT = 101;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -162,8 +161,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onManualReadingClicked() {
-        Intent intent = new Intent(this, ReadChasisOrPatentActivity.class);
-        intent.putExtra(ReadChasisOrPatentActivity.ARG_READING_TYPE, ReadChasisOrPatentActivity.PATENT_TYPE);
+        Intent intent = new Intent(this, ManualCodeReadingActivity.class);
+        intent.putExtra(ManualCodeReadingActivity.ARG_READING_TYPE, ManualCodeReadingActivity.PATENT_TYPE);
         startActivity(intent);
     }
 }
