@@ -5,9 +5,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_mis_autos"
+            android:id="@+id/navigation_read_qr_code"
             android:icon="@drawable/ic_qr_code"
             android:title="@string/item_validate_qr" />
+
+        <item
+            android:id="@+id/navigation_historic_qr"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/navigation_historic_qr" />
 
         <item
             android:id="@+id/navigation_contactanos"

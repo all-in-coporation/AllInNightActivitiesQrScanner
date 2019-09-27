@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import ar.com.AllInNight.ActivitiesQrScanner.R;
 import ar.com.AllInNight.ActivitiesQrScanner.beans.Car;
-import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarsFragment;
+import ar.com.AllInNight.ActivitiesQrScanner.fragments.HistoricReadingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.listeners.onMoveAndSwipedListener;
 
 import java.util.ArrayList;
@@ -26,9 +26,9 @@ public class MyCarRecybleViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     private Context context;
     private List<Car> mItems;
     private int color = 0;
-    private MyCarsFragment.OnMyCarsFragmentInteractionListener listener;
+    private HistoricReadingFragment.OnMyCarsFragmentInteractionListener listener;
 
-    public MyCarRecybleViewAdapter(Context context, MyCarsFragment.OnMyCarsFragmentInteractionListener listener) {
+    public MyCarRecybleViewAdapter(Context context, HistoricReadingFragment.OnMyCarsFragmentInteractionListener listener) {
         this.context = context;
         mItems = new ArrayList();
         this.listener = listener;

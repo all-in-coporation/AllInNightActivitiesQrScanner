@@ -20,9 +20,11 @@ import ar.com.AllInNight.ActivitiesQrScanner.R;
 import ar.com.AllInNight.ActivitiesQrScanner.adapters.MyCarRecybleViewAdapter;
 import ar.com.AllInNight.ActivitiesQrScanner.beans.Car;
 
-
-public class MyCarsFragment extends Fragment {
-    public static final String TAG = "MyCarsFragment";
+/**
+ * Contiene el histórico
+ */
+public class HistoricReadingFragment extends Fragment {
+    public static final String TAG = "HistoricReadingFragment";
     private OnMyCarsFragmentInteractionListener mListener;
     private RecyclerView mRecyclerView;
     private MyCarRecybleViewAdapter adapter;
@@ -32,12 +34,12 @@ public class MyCarsFragment extends Fragment {
     private int loadTimes;
 
 
-    public MyCarsFragment() {
+    public HistoricReadingFragment() {
         // Required empty public constructor
     }
 
-    public static MyCarsFragment newInstance() {
-        MyCarsFragment fragment = new MyCarsFragment();
+    public static HistoricReadingFragment newInstance() {
+        HistoricReadingFragment fragment = new HistoricReadingFragment();
         return fragment;
     }
 

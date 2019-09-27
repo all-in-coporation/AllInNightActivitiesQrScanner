@@ -23,16 +23,15 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ar.com.AllInNight.ActivitiesQrScanner.beans.Car;
-import ar.com.AllInNight.ActivitiesQrScanner.fragments.CarDealerTabFragment;
+import ar.com.AllInNight.ActivitiesQrScanner.fragments.HistoricReadingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.ManualReadingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MerchandisingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarTabFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarsAccesoriesFragment;
-import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarsFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.R;
 
 public class MainActivity extends AppCompatActivity
-                          implements MyCarsFragment.OnMyCarsFragmentInteractionListener,
+                          implements HistoricReadingFragment.OnMyCarsFragmentInteractionListener,
                                      MyCarTabFragment.OnFragmentInteractionListener,
                                      MyCarsAccesoriesFragment.OnMyCarAccesoriesListener,
                                      MerchandisingFragment.OnMerchandisignListener,
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity
 
     private void openCamera(){
         if (ContextCompat.checkSelfPermission( context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+            Intent intent = new Intent(this, ReadQrActivity.class);
             startActivityForResult(intent, MY_CAMERA_REQUEST_CODE);
         }
         else{
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity
                     fab.show();
                     return true;
                 case R.id.bottom_navigation_store:
-                    replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+                    replaceFragment(HistoricReadingFragment.newInstance(), HistoricReadingFragment.TAG);
                     fab.hide();
                     return true;
             }
@@ -128,8 +127,11 @@ public class MainActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             int id = item.getItemId();
 
-            if (id == R.id.navigation_mis_autos) {
+            if (id == R.id.navigation_read_qr_code) {
                 replaceFragment(ManualReadingFragment.newInstance(), ManualReadingFragment.TAG);
+            }
+            else if (id == R.id.navigation_historic_qr) {
+                replaceFragment(HistoricReadingFragment.newInstance(), HistoricReadingFragment.TAG);
             }
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
