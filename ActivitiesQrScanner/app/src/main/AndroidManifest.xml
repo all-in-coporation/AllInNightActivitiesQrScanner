@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ar.com.AllInNight.ActivitiesQrScanner">
 
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -12,19 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="ar.com.AllInNight.ActivitiesQrScanner.activities.InfoMyCarActivity"
+            android:name=".activities.InfoMyCarActivity"
             android:label="@string/title_activity_info_my_car"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ar.com.AllInNight.ActivitiesQrScanner.activities.ReadChasisOrPatentActivity"
+            android:name=".activities.ReadChasisOrPatentActivity"
             android:label="@string/title_activity_read_chasis_or_patent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ar.com.AllInNight.ActivitiesQrScanner.activities.WellcomeChasisActivity"
+            android:name=".activities.WellcomeChasisActivity"
             android:label="@string/title_activity_wellcome_chasis"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="ar.com.AllInNight.ActivitiesQrScanner.activities.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ar.com.AllInNight.ActivitiesQrScanner.activities.MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name" />
     </application>
 

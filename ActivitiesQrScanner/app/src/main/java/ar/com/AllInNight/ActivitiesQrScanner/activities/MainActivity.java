@@ -24,6 +24,7 @@ import android.view.View;
 
 import ar.com.AllInNight.ActivitiesQrScanner.beans.Car;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.CarDealerTabFragment;
+import ar.com.AllInNight.ActivitiesQrScanner.fragments.ManualReadingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MerchandisingFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarTabFragment;
 import ar.com.AllInNight.ActivitiesQrScanner.fragments.MyCarsAccesoriesFragment;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity
                           implements MyCarsFragment.OnMyCarsFragmentInteractionListener,
                                      MyCarTabFragment.OnFragmentInteractionListener,
                                      MyCarsAccesoriesFragment.OnMyCarAccesoriesListener,
-                                     MerchandisingFragment.OnMerchandisignListener
+                                     MerchandisingFragment.OnMerchandisignListener,
+    ManualReadingFragment.OnManualReadingFragmentInteractionListener
 {
     private Context context;
     private FloatingActionButton fab;
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottonNavigation);
         navigation.setOnNavigationItemSelectedListener(this.onButtonNavigationViewItemSelectedListener);
 
-        this.replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+        this.replaceFragment(ManualReadingFragment.newInstance(), ManualReadingFragment.TAG);
 
         fab = findViewById(R.id.fab_add_main_activity);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity
 
             switch (item.getItemId()) {
                 case R.id.bottom_navigation_mis_autos:
-                    replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+                    replaceFragment(ManualReadingFragment.newInstance(), ManualReadingFragment.TAG);
                     fab.show();
                     return true;
                 case R.id.bottom_navigation_store:
@@ -127,7 +129,7 @@ public class MainActivity extends AppCompatActivity
             int id = item.getItemId();
 
             if (id == R.id.navigation_mis_autos) {
-                replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
+                replaceFragment(ManualReadingFragment.newInstance(), ManualReadingFragment.TAG);
             }
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -154,5 +156,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onMerchandisignSeleceted(Uri uri) {
 
+    }
+
+    @Override
+    public void onManualReadingClicked() {
+        Intent intent = new Intent(this, ReadChasisOrPatentActivity.class);
+        intent.putExtra(ReadChasisOrPatentActivity.ARG_READING_TYPE, ReadChasisOrPatentActivity.PATENT_TYPE);
+        startActivity(intent);
     }
 }

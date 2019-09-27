@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/bottom_navigation_mis_autos"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_qr_code"
         android:title="@string/sales_of_day" />
     <item
         android:id="@+id/bottom_navigation_store"

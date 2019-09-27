@@ -17,7 +17,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/background_degrade"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
         />
