@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
                     fab.show();
                     return true;
                 case R.id.bottom_navigation_store:
-                    replaceFragment(CarDealerTabFragment.newInstance(), CarDealerTabFragment.TAG);
+                    replaceFragment(MyCarsFragment.newInstance(), MyCarsFragment.TAG);
                     fab.hide();
                     return true;
             }

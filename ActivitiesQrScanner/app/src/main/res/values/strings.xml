@@ -11,7 +11,6 @@
     <string name="navigation_drawer_open">Abrir navigation drawer</string>
     <string name="navigation_drawer_close">Cerrar navigation drawer</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_info_my_car">Mi Actividad</string>
     <string name="title_add_car_to_may_cars">Scannear</string>
 
@@ -26,7 +25,9 @@
     <string name="title_find_concesionaria">Buscar cercana</string>
     <string name="title_find_concesionaria_buy">Comprar auto</string>
     <string name="nav_userSubDescription_value">Actividad estrella</string>
-    <string name="sales_of_day">Validar QR</string>
+    <string name="item_validate_qr">Validar QR</string>
     <string name="conctact_us">Contáctenos</string>
     <string name="help_option">Ayuda</string>
+    <string name="navigation_historic_qr">Validados</string>
+    <string name="manual_code_reading">Ingreso manual</string>
 </resources>

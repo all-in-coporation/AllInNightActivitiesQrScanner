@@ -16,10 +16,10 @@
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
-        android:text="Digitar chasis"
+        android:text="@string/manual_code_reading"
         android:textAppearance="?android:attr/textAppearanceButton"
         android:textColor="@color/white"
-        app:icon="@drawable/ic_car_of_hatchback_model"
+        app:icon="@drawable/ic_touch_app_black_24dp"
         app:rippleColor="@color/colorPrimaryLight"
         android:layout_gravity="center"/>
 

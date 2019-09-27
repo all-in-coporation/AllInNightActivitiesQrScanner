@@ -3,9 +3,9 @@
     <item
         android:id="@+id/bottom_navigation_mis_autos"
         android:icon="@drawable/ic_qr_code"
-        android:title="@string/sales_of_day" />
+        android:title="@string/item_validate_qr" />
     <item
         android:id="@+id/bottom_navigation_store"
-        android:icon="@drawable/ic_shopping_cart_black_24dp"
-        android:title="Store" />
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="@string/navigation_historic_qr" />
 </menu>
